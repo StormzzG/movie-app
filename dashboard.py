@@ -40,10 +40,7 @@ if gender_1 and not age_1:
 
 
 prediction = model.predict([[age,gender]])
-#st.write(prediction)
 
-# for t in prediction:
-#     st.write(t)
 if prediction == 'All':
     st.subheader('Generally watched Shows...')
     url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity.desc&page=1&with_genres=37"
@@ -195,13 +192,7 @@ elif prediction == 'Action':
         rating.append(round(x['vote_average'],1))
         views.append(x['overview'])
 
-    #st.write(r)
-
     first = "https://image.tmdb.org/t/p/w500"
-
-    # for m in new[:15]:
-    #     st.image(first+m)
-
 
     col1,col2 = st.columns((2))
     with col1:
@@ -330,13 +321,7 @@ elif prediction == 'War':
         rating.append(round(x['vote_average'],1))
         views.append(x['overview'])
 
-    #st.write(r)
-
     first = "https://image.tmdb.org/t/p/w500"
-
-    # for m in new[:15]:
-    #     st.image(first+m)
-
 
     col1,col2 = st.columns((2))
     with col1:
@@ -465,13 +450,7 @@ elif prediction == 'Documentary':
         rating.append(round(x['vote_average'],1))
         views.append(x['overview'])
 
-    #st.write(r)
-
     first = "https://image.tmdb.org/t/p/w500"
-
-    # for m in new[:15]:
-    #     st.image(first+m)
-
 
     col1,col2 = st.columns((2))
     with col1:
