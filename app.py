@@ -54,12 +54,14 @@ if prediction == 'All':
     titles = []
     rating = []
     views = []
+    counts = []
 
     for x in path:
         new.append(x['poster_path'])
         titles.append(x['title'])
         rating.append(round(x['vote_average'],1))
         views.append(x['overview'])
+        counts.append(x['vote_count'])
     
     first = "https://image.tmdb.org/t/p/w500"
 
@@ -67,12 +69,12 @@ if prediction == 'All':
     with col1:
         st.image(first+new[0])
         st.write(titles[0])
-        st.write(f"Rating: {rating[0]}")
+        st.write(f"Rating: {rating[0]} by {counts[0]} reviews")
         st.write(f"Overview: {views[0]}")
     with col2:
         st.image(first+new[1])
         st.write(titles[1])
-        st.write(f"Rating: {rating[1]}")
+        st.write(f"Rating: {rating[1]} by {counts[1]} reviews")
         st.write(f"Overview: {views[1]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -82,12 +84,12 @@ if prediction == 'All':
     with col3:
         st.image(first+new[2])
         st.write(titles[2])
-        st.write(f"Rating: {rating[2]}")
+        st.write(f"Rating: {rating[2]} by {counts[2]} reviews")
         st.write(f"Overview: {views[2]}")
     with col4:
         st.image(first+new[3])
         st.write(titles[3])
-        st.write(f"Rating: {rating[3]}")
+        st.write(f"Rating: {rating[3]} by {counts[3]} reviews")
         st.write(f"Overview: {views[3]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -97,12 +99,12 @@ if prediction == 'All':
     with col5:
         st.image(first+new[4])
         st.write(titles[4])
-        st.write(f"Rating: {rating[4]}")
+        st.write(f"Rating: {rating[4]} by {counts[4]} reviews")
         st.write(f"Overview: {views[4]}")
     with col6:
         st.image(first+new[5])
         st.write(titles[5])
-        st.write(f"Rating: {rating[5]}")
+        st.write(f"Rating: {rating[5]} by {counts[5]} reviews")
         st.write(f"Overview: {views[5]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -112,12 +114,12 @@ if prediction == 'All':
     with col7:
         st.image(first+new[6])
         st.write(titles[6])
-        st.write(f"Rating: {rating[6]}")
+        st.write(f"Rating: {rating[6]} by {counts[6]} reviews")
         st.write(f"Overview: {views[6]}")
     with col8:
         st.image(first+new[7])
         st.write(titles[7])
-        st.write(f"Rating: {rating[7]}")
+        st.write(f"Rating: {rating[7]} by {counts[7]} reviews")
         st.write(f"Overview: {views[7]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -127,12 +129,12 @@ if prediction == 'All':
     with col9:
         st.image(first+new[8])
         st.write(titles[8])
-        st.write(f"Rating: {rating[8]}")
+        st.write(f"Rating: {rating[8]} by {counts[8]} reviews")
         st.write(f"Overview: {views[8]}")
     with col10:
         st.image(first+new[9])
         st.write(titles[9])
-        st.write(f"Rating: {rating[9]}")
+        st.write(f"Rating: {rating[9]} by {counts[9]} reviews")
         st.write(f"Overview: {views[9]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -142,12 +144,12 @@ if prediction == 'All':
     with col11:
         st.image(first+new[10])
         st.write(titles[10])
-        st.write(f"Rating: {rating[10]}")
+        st.write(f"Rating: {rating[10]} by {counts[10]} reviews")
         st.write(f"Overview: {views[10]}")
     with col12:
         st.image(first+new[11])
         st.write(titles[11])
-        st.write(f"Rating: {rating[11]}")
+        st.write(f"Rating: {rating[11]} by {counts[11]} reviews")
         st.write(f"Overview: {views[11]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -157,12 +159,12 @@ if prediction == 'All':
     with col13:
         st.image(first+new[12])
         st.write(titles[12])
-        st.write(f"Rating: {rating[12]}")
+        st.write(f"Rating: {rating[12]} by {counts[12]} reviews")
         st.write(f"Overview: {views[12]}")
     with col14:
         st.image(first+new[13])
         st.write(titles[13])
-        st.write(f"Rating: {rating[13]}")
+        st.write(f"Rating: {rating[13]} by {counts[13]} reviews")
         st.write(f"Overview: {views[13]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -184,12 +186,14 @@ elif prediction == 'Action':
     titles = []
     rating = []
     views = []
+    counts = []
 
     for x in path:
         new.append(x['poster_path'])
         titles.append(x['title'])
         rating.append(round(x['vote_average'],1))
         views.append(x['overview'])
+        counts.append(x['vote_count'])
 
     first = "https://image.tmdb.org/t/p/w500"
 
@@ -197,12 +201,12 @@ elif prediction == 'Action':
     with col1:
         st.image(first+new[0])
         st.write(titles[0])
-        st.write(f"Rating: {rating[0]}")
+        st.write(f"Rating: {rating[0]} by {counts[0]} reviews")
         st.write(f"Overview: {views[0]}")
     with col2:
         st.image(first+new[1])
         st.write(titles[1])
-        st.write(f"Rating: {rating[1]}")
+        st.write(f"Rating: {rating[1]} by {counts[1]} reviews")
         st.write(f"Overview: {views[1]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -212,12 +216,12 @@ elif prediction == 'Action':
     with col3:
         st.image(first+new[2])
         st.write(titles[2])
-        st.write(f"Rating: {rating[2]}")
+        st.write(f"Rating: {rating[2]} by {counts[2]} reviews")
         st.write(f"Overview: {views[2]}")
     with col4:
         st.image(first+new[3])
         st.write(titles[3])
-        st.write(f"Rating: {rating[3]}")
+        st.write(f"Rating: {rating[3]} by {counts[3]} reviews")
         st.write(f"Overview: {views[3]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -227,12 +231,12 @@ elif prediction == 'Action':
     with col5:
         st.image(first+new[4])
         st.write(titles[4])
-        st.write(f"Rating: {rating[4]}")
+        st.write(f"Rating: {rating[4]} by {counts[4]} reviews")
         st.write(f"Overview: {views[4]}")
     with col6:
         st.image(first+new[5])
         st.write(titles[5])
-        st.write(f"Rating: {rating[5]}")
+        st.write(f"Rating: {rating[5]} by {counts[5]} reviews")
         st.write(f"Overview: {views[5]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -242,12 +246,12 @@ elif prediction == 'Action':
     with col7:
         st.image(first+new[6])
         st.write(titles[6])
-        st.write(f"Rating: {rating[6]}")
+        st.write(f"Rating: {rating[6]} by {counts[6]} reviews")
         st.write(f"Overview: {views[6]}")
     with col8:
         st.image(first+new[7])
         st.write(titles[7])
-        st.write(f"Rating: {rating[7]}")
+        st.write(f"Rating: {rating[7]} by {counts[7]} reviews")
         st.write(f"Overview: {views[7]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -257,12 +261,12 @@ elif prediction == 'Action':
     with col9:
         st.image(first+new[8])
         st.write(titles[8])
-        st.write(f"Rating: {rating[8]}")
+        st.write(f"Rating: {rating[8]} by {counts[8]} reviews")
         st.write(f"Overview: {views[8]}")
     with col10:
         st.image(first+new[9])
         st.write(titles[9])
-        st.write(f"Rating: {rating[9]}")
+        st.write(f"Rating: {rating[9]} by {counts[9]} reviews")
         st.write(f"Overview: {views[9]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -272,12 +276,12 @@ elif prediction == 'Action':
     with col11:
         st.image(first+new[10])
         st.write(titles[10])
-        st.write(f"Rating: {rating[10]}")
+        st.write(f"Rating: {rating[10]} by {counts[10]} reviews")
         st.write(f"Overview: {views[10]}")
     with col12:
         st.image(first+new[11])
         st.write(titles[11])
-        st.write(f"Rating: {rating[11]}")
+        st.write(f"Rating: {rating[11]} by {counts[11]} reviews")
         st.write(f"Overview: {views[11]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -287,12 +291,12 @@ elif prediction == 'Action':
     with col13:
         st.image(first+new[12])
         st.write(titles[12])
-        st.write(f"Rating: {rating[12]}")
+        st.write(f"Rating: {rating[12]} by {counts[12]} reviews")
         st.write(f"Overview: {views[12]}")
     with col14:
         st.image(first+new[13])
         st.write(titles[13])
-        st.write(f"Rating: {rating[13]}")
+        st.write(f"Rating: {rating[13]} by {counts[13]} reviews")
         st.write(f"Overview: {views[13]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -313,12 +317,15 @@ elif prediction == 'War':
     titles = []
     rating = []
     views = []
+    counts = []
 
     for x in path:
         new.append(x['poster_path'])
         titles.append(x['title'])
         rating.append(round(x['vote_average'],1))
         views.append(x['overview'])
+        counts.append(x['vote_count'])
+
 
     first = "https://image.tmdb.org/t/p/w500"
 
@@ -326,12 +333,12 @@ elif prediction == 'War':
     with col1:
         st.image(first+new[0])
         st.write(titles[0])
-        st.write(f"Rating: {rating[0]}")
+        st.write(f"Rating: {rating[0]} by {counts[0]} reviews")
         st.write(f"Overview: {views[0]}")
     with col2:
         st.image(first+new[1])
         st.write(titles[1])
-        st.write(f"Rating: {rating[1]}")
+        st.write(f"Rating: {rating[1]} by {counts[1]} reviews")
         st.write(f"Overview: {views[1]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -341,12 +348,12 @@ elif prediction == 'War':
     with col3:
         st.image(first+new[2])
         st.write(titles[2])
-        st.write(f"Rating: {rating[2]}")
+        st.write(f"Rating: {rating[2]} by {counts[2]} reviews")
         st.write(f"Overview: {views[2]}")
     with col4:
         st.image(first+new[3])
         st.write(titles[3])
-        st.write(f"Rating: {rating[3]}")
+        st.write(f"Rating: {rating[3]} by {counts[3]} reviews")
         st.write(f"Overview: {views[3]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -356,12 +363,12 @@ elif prediction == 'War':
     with col5:
         st.image(first+new[4])
         st.write(titles[4])
-        st.write(f"Rating: {rating[4]}")
+        st.write(f"Rating: {rating[4]} by {counts[4]} reviews")
         st.write(f"Overview: {views[4]}")
     with col6:
         st.image(first+new[5])
         st.write(titles[5])
-        st.write(f"Rating: {rating[5]}")
+        st.write(f"Rating: {rating[5]} by {counts[5]} reviews")
         st.write(f"Overview: {views[5]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -371,12 +378,12 @@ elif prediction == 'War':
     with col7:
         st.image(first+new[6])
         st.write(titles[6])
-        st.write(f"Rating: {rating[6]}")
+        st.write(f"Rating: {rating[6]} by {counts[6]} reviews")
         st.write(f"Overview: {views[6]}")
     with col8:
         st.image(first+new[7])
         st.write(titles[7])
-        st.write(f"Rating: {rating[7]}")
+        st.write(f"Rating: {rating[7]} by {counts[7]} reviews")
         st.write(f"Overview: {views[7]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -386,12 +393,12 @@ elif prediction == 'War':
     with col9:
         st.image(first+new[8])
         st.write(titles[8])
-        st.write(f"Rating: {rating[8]}")
+        st.write(f"Rating: {rating[8]} by {counts[8]} reviews")
         st.write(f"Overview: {views[8]}")
     with col10:
         st.image(first+new[9])
         st.write(titles[9])
-        st.write(f"Rating: {rating[9]}")
+        st.write(f"Rating: {rating[9]} by {counts[9]} reviews")
         st.write(f"Overview: {views[9]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -401,12 +408,12 @@ elif prediction == 'War':
     with col11:
         st.image(first+new[10])
         st.write(titles[10])
-        st.write(f"Rating: {rating[10]}")
+        st.write(f"Rating: {rating[10]} by {counts[10]} reviews")
         st.write(f"Overview: {views[10]}")
     with col12:
         st.image(first+new[11])
         st.write(titles[11])
-        st.write(f"Rating: {rating[11]}")
+        st.write(f"Rating: {rating[11]} by {counts[11]} reviews")
         st.write(f"Overview: {views[11]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -416,12 +423,12 @@ elif prediction == 'War':
     with col13:
         st.image(first+new[12])
         st.write(titles[12])
-        st.write(f"Rating: {rating[12]}")
+        st.write(f"Rating: {rating[12]} by {counts[12]} reviews")
         st.write(f"Overview: {views[12]}")
     with col14:
         st.image(first+new[13])
         st.write(titles[13])
-        st.write(f"Rating: {rating[13]}")
+        st.write(f"Rating: {rating[13]} by {counts[13]} reviews")
         st.write(f"Overview: {views[13]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -442,12 +449,14 @@ elif prediction == 'Documentary':
     titles = []
     rating = []
     views = []
+    counts = []
 
     for x in path:
         new.append(x['poster_path'])
         titles.append(x['title'])
         rating.append(round(x['vote_average'],1))
         views.append(x['overview'])
+        counts.append(x['vote_count'])
 
     first = "https://image.tmdb.org/t/p/w500"
 
@@ -455,12 +464,12 @@ elif prediction == 'Documentary':
     with col1:
         st.image(first+new[0])
         st.write(titles[0])
-        st.write(f"Rating: {rating[0]}")
+        st.write(f"Rating: {rating[0]} by {counts[0]} reviews")
         st.write(f"Overview: {views[0]}")
     with col2:
         st.image(first+new[1])
         st.write(titles[1])
-        st.write(f"Rating: {rating[1]}")
+        st.write(f"Rating: {rating[1]} by {counts[1]} reviews")
         st.write(f"Overview: {views[1]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -470,12 +479,12 @@ elif prediction == 'Documentary':
     with col3:
         st.image(first+new[2])
         st.write(titles[2])
-        st.write(f"Rating: {rating[2]}")
+        st.write(f"Rating: {rating[2]} by {counts[2]} reviews")
         st.write(f"Overview: {views[2]}")
     with col4:
         st.image(first+new[3])
         st.write(titles[3])
-        st.write(f"Rating: {rating[3]}")
+        st.write(f"Rating: {rating[3]} by {counts[3]} reviews")
         st.write(f"Overview: {views[3]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -485,12 +494,12 @@ elif prediction == 'Documentary':
     with col5:
         st.image(first+new[4])
         st.write(titles[4])
-        st.write(f"Rating: {rating[4]}")
+        st.write(f"Rating: {rating[4]} by {counts[4]} reviews")
         st.write(f"Overview: {views[4]}")
     with col6:
         st.image(first+new[5])
         st.write(titles[5])
-        st.write(f"Rating: {rating[5]}")
+        st.write(f"Rating: {rating[5]} by {counts[5]} reviews")
         st.write(f"Overview: {views[5]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -500,12 +509,12 @@ elif prediction == 'Documentary':
     with col7:
         st.image(first+new[6])
         st.write(titles[6])
-        st.write(f"Rating: {rating[6]}")
+        st.write(f"Rating: {rating[6]} by {counts[6]} reviews")
         st.write(f"Overview: {views[6]}")
     with col8:
         st.image(first+new[7])
         st.write(titles[7])
-        st.write(f"Rating: {rating[7]}")
+        st.write(f"Rating: {rating[7]} by {counts[7]} reviews")
         st.write(f"Overview: {views[7]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -515,12 +524,12 @@ elif prediction == 'Documentary':
     with col9:
         st.image(first+new[8])
         st.write(titles[8])
-        st.write(f"Rating: {rating[8]}")
+        st.write(f"Rating: {rating[8]} by {counts[8]} reviews")
         st.write(f"Overview: {views[8]}")
     with col10:
         st.image(first+new[9])
         st.write(titles[9])
-        st.write(f"Rating: {rating[9]}")
+        st.write(f"Rating: {rating[9]} by {counts[9]} reviews")
         st.write(f"Overview: {views[9]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -530,12 +539,12 @@ elif prediction == 'Documentary':
     with col11:
         st.image(first+new[10])
         st.write(titles[10])
-        st.write(f"Rating: {rating[10]}")
+        st.write(f"Rating: {rating[10]} by {counts[10]} reviews")
         st.write(f"Overview: {views[10]}")
     with col12:
         st.image(first+new[11])
         st.write(titles[11])
-        st.write(f"Rating: {rating[11]}")
+        st.write(f"Rating: {rating[11]} by {counts[11]} reviews")
         st.write(f"Overview: {views[11]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -545,12 +554,12 @@ elif prediction == 'Documentary':
     with col13:
         st.image(first+new[12])
         st.write(titles[12])
-        st.write(f"Rating: {rating[12]}")
+        st.write(f"Rating: {rating[12]} by {counts[12]} reviews")
         st.write(f"Overview: {views[12]}")
     with col14:
         st.image(first+new[13])
         st.write(titles[13])
-        st.write(f"Rating: {rating[13]}")
+        st.write(f"Rating: {rating[13]} by {counts[13]} reviews")
         st.write(f"Overview: {views[13]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -572,12 +581,14 @@ elif prediction == 'Drama':
     titles = []
     rating = []
     views = []
+    counts = []
 
     for x in path:
         new.append(x['poster_path'])
         titles.append(x['title'])
         rating.append(round(x['vote_average'],1))
         views.append(x['overview'])
+        counts.append(x['vote_count'])
 
     first = "https://image.tmdb.org/t/p/w500"
 
@@ -585,12 +596,12 @@ elif prediction == 'Drama':
     with col1:
         st.image(first+new[0])
         st.write(titles[0])
-        st.write(f"Rating: {rating[0]}")
+        st.write(f"Rating: {rating[0]} by {counts[0]} reviews")
         st.write(f"Overview: {views[0]}")
     with col2:
         st.image(first+new[1])
         st.write(titles[1])
-        st.write(f"Rating: {rating[1]}")
+        st.write(f"Rating: {rating[1]} by {counts[1]} reviews")
         st.write(f"Overview: {views[1]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -600,12 +611,12 @@ elif prediction == 'Drama':
     with col3:
         st.image(first+new[2])
         st.write(titles[2])
-        st.write(f"Rating: {rating[2]}")
+        st.write(f"Rating: {rating[2]} by {counts[2]} reviews")
         st.write(f"Overview: {views[2]}")
     with col4:
         st.image(first+new[3])
         st.write(titles[3])
-        st.write(f"Rating: {rating[3]}")
+        st.write(f"Rating: {rating[3]} by {counts[3]} reviews")
         st.write(f"Overview: {views[3]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -615,12 +626,12 @@ elif prediction == 'Drama':
     with col5:
         st.image(first+new[4])
         st.write(titles[4])
-        st.write(f"Rating: {rating[4]}")
+        st.write(f"Rating: {rating[4]} by {counts[4]} reviews")
         st.write(f"Overview: {views[4]}")
     with col6:
         st.image(first+new[5])
         st.write(titles[5])
-        st.write(f"Rating: {rating[5]}")
+        st.write(f"Rating: {rating[5]} by {counts[5]} reviews")
         st.write(f"Overview: {views[5]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -630,12 +641,12 @@ elif prediction == 'Drama':
     with col7:
         st.image(first+new[6])
         st.write(titles[6])
-        st.write(f"Rating: {rating[6]}")
+        st.write(f"Rating: {rating[6]} by {counts[6]} reviews")
         st.write(f"Overview: {views[6]}")
     with col8:
         st.image(first+new[7])
         st.write(titles[7])
-        st.write(f"Rating: {rating[7]}")
+        st.write(f"Rating: {rating[7]} by {counts[7]} reviews")
         st.write(f"Overview: {views[7]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -645,12 +656,12 @@ elif prediction == 'Drama':
     with col9:
         st.image(first+new[8])
         st.write(titles[8])
-        st.write(f"Rating: {rating[8]}")
+        st.write(f"Rating: {rating[8]} by {counts[8]} reviews")
         st.write(f"Overview: {views[8]}")
     with col10:
         st.image(first+new[9])
         st.write(titles[9])
-        st.write(f"Rating: {rating[9]}")
+        st.write(f"Rating: {rating[9]} by {counts[9]} reviews")
         st.write(f"Overview: {views[9]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -660,12 +671,12 @@ elif prediction == 'Drama':
     with col11:
         st.image(first+new[10])
         st.write(titles[10])
-        st.write(f"Rating: {rating[10]}")
+        st.write(f"Rating: {rating[10]} by {counts[10]} reviews")
         st.write(f"Overview: {views[10]}")
     with col12:
         st.image(first+new[11])
         st.write(titles[11])
-        st.write(f"Rating: {rating[11]}")
+        st.write(f"Rating: {rating[11]} by {counts[11]} reviews")
         st.write(f"Overview: {views[11]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -675,12 +686,12 @@ elif prediction == 'Drama':
     with col13:
         st.image(first+new[12])
         st.write(titles[12])
-        st.write(f"Rating: {rating[12]}")
+        st.write(f"Rating: {rating[12]} by {counts[12]} reviews")
         st.write(f"Overview: {views[12]}")
     with col14:
         st.image(first+new[13])
         st.write(titles[13])
-        st.write(f"Rating: {rating[13]}")
+        st.write(f"Rating: {rating[13]} by {counts[13]} reviews")
         st.write(f"Overview: {views[13]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -702,31 +713,27 @@ elif prediction == 'Thriller':
     titles = []
     rating = []
     views = []
+    counts = []
 
     for x in path:
         new.append(x['poster_path'])
         titles.append(x['title'])
         rating.append(round(x['vote_average'],1))
         views.append(x['overview'])
-
-    #st.write(r)
+        counts.append(x['vote_count'])
 
     first = "https://image.tmdb.org/t/p/w500"
-
-    # for m in new[:15]:
-    #     st.image(first+m)
-
 
     col1,col2 = st.columns((2))
     with col1:
         st.image(first+new[0])
         st.write(titles[0])
-        st.write(f"Rating: {rating[0]}")
+        st.write(f"Rating: {rating[0]} by {counts[0]} reviews")
         st.write(f"Overview: {views[0]}")
     with col2:
         st.image(first+new[1])
         st.write(titles[1])
-        st.write(f"Rating: {rating[1]}")
+        st.write(f"Rating: {rating[1]} by {counts[1]} reviews")
         st.write(f"Overview: {views[1]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -736,12 +743,12 @@ elif prediction == 'Thriller':
     with col3:
         st.image(first+new[2])
         st.write(titles[2])
-        st.write(f"Rating: {rating[2]}")
+        st.write(f"Rating: {rating[2]} by {counts[2]} reviews")
         st.write(f"Overview: {views[2]}")
     with col4:
         st.image(first+new[3])
         st.write(titles[3])
-        st.write(f"Rating: {rating[3]}")
+        st.write(f"Rating: {rating[3]} by {counts[3]} reviews")
         st.write(f"Overview: {views[3]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -751,12 +758,12 @@ elif prediction == 'Thriller':
     with col5:
         st.image(first+new[4])
         st.write(titles[4])
-        st.write(f"Rating: {rating[4]}")
+        st.write(f"Rating: {rating[4]} by {counts[4]} reviews")
         st.write(f"Overview: {views[4]}")
     with col6:
         st.image(first+new[5])
         st.write(titles[5])
-        st.write(f"Rating: {rating[5]}")
+        st.write(f"Rating: {rating[5]} by {counts[5]} reviews")
         st.write(f"Overview: {views[5]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -766,12 +773,12 @@ elif prediction == 'Thriller':
     with col7:
         st.image(first+new[6])
         st.write(titles[6])
-        st.write(f"Rating: {rating[6]}")
+        st.write(f"Rating: {rating[6]} by {counts[6]} reviews")
         st.write(f"Overview: {views[6]}")
     with col8:
         st.image(first+new[7])
         st.write(titles[7])
-        st.write(f"Rating: {rating[7]}")
+        st.write(f"Rating: {rating[7]} by {counts[7]} reviews")
         st.write(f"Overview: {views[7]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -781,12 +788,12 @@ elif prediction == 'Thriller':
     with col9:
         st.image(first+new[8])
         st.write(titles[8])
-        st.write(f"Rating: {rating[8]}")
+        st.write(f"Rating: {rating[8]} by {counts[8]} reviews")
         st.write(f"Overview: {views[8]}")
     with col10:
         st.image(first+new[9])
         st.write(titles[9])
-        st.write(f"Rating: {rating[9]}")
+        st.write(f"Rating: {rating[9]} by {counts[9]} reviews")
         st.write(f"Overview: {views[9]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -796,12 +803,12 @@ elif prediction == 'Thriller':
     with col11:
         st.image(first+new[10])
         st.write(titles[10])
-        st.write(f"Rating: {rating[10]}")
+        st.write(f"Rating: {rating[10]} by {counts[10]} reviews")
         st.write(f"Overview: {views[10]}")
     with col12:
         st.image(first+new[11])
         st.write(titles[11])
-        st.write(f"Rating: {rating[11]}")
+        st.write(f"Rating: {rating[11]} by {counts[11]} reviews")
         st.write(f"Overview: {views[11]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -811,12 +818,12 @@ elif prediction == 'Thriller':
     with col13:
         st.image(first+new[12])
         st.write(titles[12])
-        st.write(f"Rating: {rating[12]}")
+        st.write(f"Rating: {rating[12]} by {counts[12]} reviews")
         st.write(f"Overview: {views[12]}")
     with col14:
         st.image(first+new[13])
         st.write(titles[13])
-        st.write(f"Rating: {rating[13]}")
+        st.write(f"Rating: {rating[13]} by {counts[13]} reviews")
         st.write(f"Overview: {views[13]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -838,12 +845,14 @@ elif prediction == 'Romance':
     titles = []
     rating = []
     views = []
+    counts = []
 
     for x in path:
         new.append(x['poster_path'])
         titles.append(x['title'])
         rating.append(round(x['vote_average'],1))
         views.append(x['overview'])
+        counts.append(x['vote_count'])
 
     first = "https://image.tmdb.org/t/p/w500"
 
@@ -851,12 +860,12 @@ elif prediction == 'Romance':
     with col1:
         st.image(first+new[0])
         st.write(titles[0])
-        st.write(f"Rating: {rating[0]}")
+        st.write(f"Rating: {rating[0]} by {counts[0]} reviews")
         st.write(f"Overview: {views[0]}")
     with col2:
         st.image(first+new[1])
         st.write(titles[1])
-        st.write(f"Rating: {rating[1]}")
+        st.write(f"Rating: {rating[1]} by {counts[1]} reviews")
         st.write(f"Overview: {views[1]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -866,12 +875,12 @@ elif prediction == 'Romance':
     with col3:
         st.image(first+new[2])
         st.write(titles[2])
-        st.write(f"Rating: {rating[2]}")
+        st.write(f"Rating: {rating[2]} by {counts[2]} reviews")
         st.write(f"Overview: {views[2]}")
     with col4:
         st.image(first+new[3])
         st.write(titles[3])
-        st.write(f"Rating: {rating[3]}")
+        st.write(f"Rating: {rating[3]} by {counts[3]} reviews")
         st.write(f"Overview: {views[3]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -881,12 +890,12 @@ elif prediction == 'Romance':
     with col5:
         st.image(first+new[4])
         st.write(titles[4])
-        st.write(f"Rating: {rating[4]}")
+        st.write(f"Rating: {rating[4]} by {counts[4]} reviews")
         st.write(f"Overview: {views[4]}")
     with col6:
         st.image(first+new[5])
         st.write(titles[5])
-        st.write(f"Rating: {rating[5]}")
+        st.write(f"Rating: {rating[5]} by {counts[5]} reviews")
         st.write(f"Overview: {views[5]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -896,12 +905,12 @@ elif prediction == 'Romance':
     with col7:
         st.image(first+new[6])
         st.write(titles[6])
-        st.write(f"Rating: {rating[6]}")
+        st.write(f"Rating: {rating[6]} by {counts[6]} reviews")
         st.write(f"Overview: {views[6]}")
     with col8:
         st.image(first+new[7])
         st.write(titles[7])
-        st.write(f"Rating: {rating[7]}")
+        st.write(f"Rating: {rating[7]} by {counts[7]} reviews")
         st.write(f"Overview: {views[7]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -911,12 +920,12 @@ elif prediction == 'Romance':
     with col9:
         st.image(first+new[8])
         st.write(titles[8])
-        st.write(f"Rating: {rating[8]}")
+        st.write(f"Rating: {rating[8]} by {counts[8]} reviews")
         st.write(f"Overview: {views[8]}")
     with col10:
         st.image(first+new[9])
         st.write(titles[9])
-        st.write(f"Rating: {rating[9]}")
+        st.write(f"Rating: {rating[9]} by {counts[9]} reviews")
         st.write(f"Overview: {views[9]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -926,12 +935,12 @@ elif prediction == 'Romance':
     with col11:
         st.image(first+new[10])
         st.write(titles[10])
-        st.write(f"Rating: {rating[10]}")
+        st.write(f"Rating: {rating[10]} by {counts[10]} reviews")
         st.write(f"Overview: {views[10]}")
     with col12:
         st.image(first+new[11])
         st.write(titles[11])
-        st.write(f"Rating: {rating[11]}")
+        st.write(f"Rating: {rating[11]} by {counts[11]} reviews")
         st.write(f"Overview: {views[11]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
@@ -941,12 +950,12 @@ elif prediction == 'Romance':
     with col13:
         st.image(first+new[12])
         st.write(titles[12])
-        st.write(f"Rating: {rating[12]}")
+        st.write(f"Rating: {rating[12]} by {counts[12]} reviews")
         st.write(f"Overview: {views[12]}")
     with col14:
         st.image(first+new[13])
         st.write(titles[13])
-        st.write(f"Rating: {rating[13]}")
+        st.write(f"Rating: {rating[13]} by {counts[13]} reviews")
         st.write(f"Overview: {views[13]}")
 
     st.markdown('<style>div.block-container{padding-top: 8rem}<style>', unsafe_allow_html=True)
