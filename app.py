@@ -954,4 +954,4 @@ elif prediction == 'Romance':
     st.write("<span style='color:#FFD700;'>Find all these movies [here](https://fbox.to/home) and I hope you find them entertaining :)</span>",unsafe_allow_html=True)
     
 
-st.write("<span style='color:#FFD700;'>This recommender is built on a supervised Decision Tree Classifier machine learning algorithm. Classification is based on age and gender using this data to recommend the best movies for you. The use of TMDB API [documentation here](https://developer.themoviedb.org/reference/intro/getting-started) has been used to keep you up to date with the latest and the best.</span>", unsafe_allow_html=True)
+st.write("<span style='color:#FFD700;'>This recommender is built on a supervised Decision Tree Classifier machine learning algorithm. Classification is based on age and gender using this data to recommend the best movies for you. The use of TMDB API [documentation here](https://developer.themoviedb.org/reference/intro/getting-started) has been implemented to keep you up to date with the latest and the best.</span>", unsafe_allow_html=True)
