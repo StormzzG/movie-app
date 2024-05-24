@@ -1,6 +1,7 @@
 import streamlit as st 
 import joblib 
 import requests
+from test import get_data 
 
 st.set_page_config(page_icon=':popcorn:',page_title='Movie Recommender')
 st.title(':popcorn: Movie Recommender')
@@ -43,10 +44,11 @@ prediction = model.predict([[age,gender]])
 
 if prediction == 'All':
     st.subheader('Generally watched Shows...')
-    url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity.desc&page=1&with_genres=37"
+    #url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity.desc&page=1&with_genres=37"
 
-    response = requests.get(url)
-    r = response.json()
+    #response = requests.get(url)
+    #r = response.json()
+    r = get_data(37)
 
     path = r['results']
 
