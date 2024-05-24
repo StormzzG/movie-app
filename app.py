@@ -44,11 +44,6 @@ prediction = model.predict([[age,gender]])
 
 if prediction == 'All':
     st.subheader('Generally watched Shows...')
-    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity.desc&page=1&with_genres=37"
-
-    # response = requests.get(url)
-    # r = response.json()
-
     r = get_data(37)
 
     path = r['results']
@@ -177,12 +172,6 @@ if prediction == 'All':
 
 elif prediction == 'Action':
     st.subheader('Consider Watching...')
-    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=28"
-
-
-    # response = requests.get(url)
-    # r = response.json()
-
     r = get_data(28)
 
     path = r['results']
@@ -310,12 +299,6 @@ elif prediction == 'Action':
 
 elif prediction == 'War':
     st.subheader('Consider Watching...')
-    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=10752"
-
-
-    # response = requests.get(url)
-    # r = response.json()
-
     r = get_data(10752)
 
     path = r['results']
@@ -444,12 +427,6 @@ elif prediction == 'War':
 
 elif prediction == 'Documentary':
     st.subheader('Consider Watching...')
-    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=99"
-
-
-    # response = requests.get(url)
-    # r = response.json()
-
     r = get_data(99)
 
     path = r['results']
@@ -578,12 +555,6 @@ elif prediction == 'Documentary':
 
 elif prediction == 'Drama':
     st.subheader('Consider Watching...')
-    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=18,10749"
-
-
-    # response = requests.get(url)
-    # r = response.json()
-
     r = get_data(18,10749)
 
     path = r['results']
@@ -711,13 +682,6 @@ elif prediction == 'Drama':
 
 elif prediction == 'Thriller':
     st.subheader('Consider Watching...')
-    # key = "568bb4e8f6e76a6eda4ee919cd1d6b6e"
-    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=53,9648"
-
-
-    # response = requests.get(url)
-    # r = response.json()
-
     r = get_data(53, 9648)
 
     path = r['results']
@@ -846,12 +810,6 @@ elif prediction == 'Thriller':
 
 elif prediction == 'Romance':
     st.subheader('Consider Watching...')
-    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=10749,9648"
-
-
-    # response = requests.get(url)
-    # r = response.json()
-
     r = get_data(10749, 9648)
 
     path = r['results']
