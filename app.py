@@ -1,6 +1,7 @@
 import streamlit as st 
 import joblib 
 import requests
+from test import get_data
 
 st.set_page_config(page_icon=':popcorn:',page_title='Movie Recommender')
 st.title(':popcorn: Movie Recommender')
@@ -43,10 +44,12 @@ prediction = model.predict([[age,gender]])
 
 if prediction == 'All':
     st.subheader('Generally watched Shows...')
-    url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity.desc&page=1&with_genres=37"
+    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity.desc&page=1&with_genres=37"
 
-    response = requests.get(url)
-    r = response.json()
+    # response = requests.get(url)
+    # r = response.json()
+
+    r = get_data(37)
 
     path = r['results']
 
@@ -174,11 +177,13 @@ if prediction == 'All':
 
 elif prediction == 'Action':
     st.subheader('Consider Watching...')
-    url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=28"
+    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=28"
 
 
-    response = requests.get(url)
-    r = response.json()
+    # response = requests.get(url)
+    # r = response.json()
+
+    r = get_data(28)
 
     path = r['results']
 
@@ -305,11 +310,13 @@ elif prediction == 'Action':
 
 elif prediction == 'War':
     st.subheader('Consider Watching...')
-    url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=10752"
+    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=10752"
 
 
-    response = requests.get(url)
-    r = response.json()
+    # response = requests.get(url)
+    # r = response.json()
+
+    r = get_data(10752)
 
     path = r['results']
 
@@ -437,11 +444,13 @@ elif prediction == 'War':
 
 elif prediction == 'Documentary':
     st.subheader('Consider Watching...')
-    url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=99"
+    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=99"
 
 
-    response = requests.get(url)
-    r = response.json()
+    # response = requests.get(url)
+    # r = response.json()
+
+    r = get_data(99)
 
     path = r['results']
 
@@ -569,11 +578,13 @@ elif prediction == 'Documentary':
 
 elif prediction == 'Drama':
     st.subheader('Consider Watching...')
-    url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=18,10749"
+    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=18,10749"
 
 
-    response = requests.get(url)
-    r = response.json()
+    # response = requests.get(url)
+    # r = response.json()
+
+    r = get_data(18,10749)
 
     path = r['results']
 
@@ -700,12 +711,14 @@ elif prediction == 'Drama':
 
 elif prediction == 'Thriller':
     st.subheader('Consider Watching...')
-    key = "568bb4e8f6e76a6eda4ee919cd1d6b6e"
-    url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=53,9648"
+    # key = "568bb4e8f6e76a6eda4ee919cd1d6b6e"
+    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=53,9648"
 
 
-    response = requests.get(url)
-    r = response.json()
+    # response = requests.get(url)
+    # r = response.json()
+
+    r = get_data(53, 9648)
 
     path = r['results']
 
@@ -833,11 +846,13 @@ elif prediction == 'Thriller':
 
 elif prediction == 'Romance':
     st.subheader('Consider Watching...')
-    url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=10749,9648"
+    # url = "https://api.themoviedb.org/3/discover/movie?api_key=568bb4e8f6e76a6eda4ee919cd1d6b6e&language=en-US&sort_by=popularity,vote_average.desc&page=1&with_genres=10749,9648"
 
 
-    response = requests.get(url)
-    r = response.json()
+    # response = requests.get(url)
+    # r = response.json()
+
+    r = get_data(10749, 9648)
 
     path = r['results']
 
