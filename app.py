@@ -1,6 +1,5 @@
 import streamlit as st 
 import joblib 
-import requests
 from test import get_data
 
 st.set_page_config(page_icon=':popcorn:',page_title='Movie Recommender')
