@@ -44,9 +44,7 @@ prediction = model.predict([[age,gender]])
 
 if prediction == 'All':
     st.subheader('Generally watched Shows...')
-    r = get_data(37)
-
-    path = r['results']
+    path = get_data(37)
 
     new = []
     titles = []
@@ -216,9 +214,7 @@ if prediction == 'All':
 
 elif prediction == 'Action':
     st.subheader('Consider Watching...')
-    r = get_data(28)
-
-    path = r['results']
+    path = get_data(28)
 
     new = []
     titles = []
@@ -387,9 +383,7 @@ elif prediction == 'Action':
 
 elif prediction == 'War':
     st.subheader('Consider Watching...')
-    r = get_data(10752)
-
-    path = r['results']
+    path = get_data(10752)
 
     new = []
     titles = []
@@ -559,9 +553,7 @@ elif prediction == 'War':
 
 elif prediction == 'Documentary':
     st.subheader('Consider Watching...')
-    r = get_data(99)
-
-    path = r['results']
+    path = get_data(99)
 
     new = []
     titles = []
@@ -731,9 +723,7 @@ elif prediction == 'Documentary':
 
 elif prediction == 'Drama':
     st.subheader('Consider Watching...')
-    r = get_data(18,10749)
-
-    path = r['results']
+    path = get_data(18,10749)
 
     new = []
     titles = []
@@ -902,9 +892,7 @@ elif prediction == 'Drama':
 
 elif prediction == 'Thriller':
     st.subheader('Consider Watching...')
-    r = get_data(53, 9648)
-
-    path = r['results']
+    path = get_data(53, 9648)
 
     new = []
     titles = []
@@ -1074,9 +1062,7 @@ elif prediction == 'Thriller':
 
 elif prediction == 'Romance':
     st.subheader('Consider Watching...')
-    r = get_data(10749, 9648)
-
-    path = r['results']
+    path = get_data(10749, 9648)
 
     new = []
     titles = []

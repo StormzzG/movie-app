@@ -19,10 +19,11 @@ def get_data(primary_genre, *additional_genres):
 
     response = requests.get(base_url, params=params)
     
-    if response.status_code == 200:
-        return response.json()  
-    else:
-        return response.status_code, response.text  
+    x = response.json()  
+    y = x['results']
+    data = sorted(y, key=lambda x: x['vote_average'], reverse=True)
+
+    return data  
 
 
 #Get movie trailer
@@ -37,13 +38,12 @@ def get_link(id):
 
   response = requests.get(url, params=params)
 
-  if response.ok:
-    data = response.json()
-    key = data['results'][0]['key']
-    link = f'https://www.youtube.com/watch?v={key}'
-    return link
-  else:
-    return response.status_code, response.text
+  data = response.json()
+  key = data['results'][0]['key']
+  link = f'https://www.youtube.com/watch?v={key}'
+  
+  return link
+  
 
 
 if __name__ == "__main__":
