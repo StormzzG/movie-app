@@ -1,5 +1,6 @@
 import requests 
 
+#Get movie data
 def get_data(primary_genre, *additional_genres):
     api_key = '568bb4e8f6e76a6eda4ee919cd1d6b6e'
     base_url = 'https://api.themoviedb.org/3/discover/movie'
@@ -10,7 +11,8 @@ def get_data(primary_genre, *additional_genres):
     params = {
         'api_key': api_key,
         'language': 'en-US',
-        'sort_by': 'popularity,vote_average.desc',
+        'sort_by': 'popularity.desc',
+        'vote_average.gte': 6,
         'page': 1,
         'with_genres': genres_str
     }
@@ -22,5 +24,27 @@ def get_data(primary_genre, *additional_genres):
     else:
         return response.status_code, response.text  
 
+
+#Get movie trailer
+def get_link(id):
+  url = f"https://api.themoviedb.org/3/movie/{id}/videos"
+  api_key = '568bb4e8f6e76a6eda4ee919cd1d6b6e'
+
+  params = {
+    'api_key':api_key,
+    'language':'en-US'
+  }
+
+  response = requests.get(url, params=params)
+
+  if response.ok:
+    data = response.json()
+    key = data['results'][0]['key']
+    link = f'https://www.youtube.com/watch?v={key}'
+    return link
+  else:
+    return response.status_code, response.text
+
+
 if __name__ == "__main__":
-  print("This is a python module. Import it and use its functions")
+  print("This is a python module built to get movie data from TMDB using TMDB API. Import it and use its functions")
