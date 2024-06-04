@@ -23,7 +23,15 @@ def get_data(primary_genre, *additional_genres):
     y = x['results']
     data = sorted(y, key=lambda x: x['vote_average'], reverse=True)
 
-    return data  
+    new = []
+    for x in data:
+        try:
+            get_link(x['id'])
+            new.append(x)
+        except Exception as e:
+            pass
+    
+    return new
 
 
 #Get movie trailer
@@ -43,7 +51,6 @@ def get_link(id):
   link = f'https://www.youtube.com/watch?v={key}'
   
   return link
-  
 
 
 if __name__ == "__main__":
